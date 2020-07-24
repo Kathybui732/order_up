@@ -8,4 +8,8 @@ class Ingredient < ApplicationRecord
   def self.total_calorie_count
     sum(:calories)
   end
+
+  def self.used_by(chef_id)
+    Ingredient.joins(:dishes).where('dishes.chef_id = chef_id').pluck('ingredients.name').uniq
+  end
 end
