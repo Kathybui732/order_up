@@ -2,8 +2,10 @@
 
 Ingredients for this dish:
 <% @dish.ingredients.each do |ingredient| %>
-<%= ingredient.name %> (<%= ingredient.calories %>)
+<%= ingredient.name %>
 <% end %>
+
+Total calorie count: <%= @dish.ingredients.total_calorie_count %>
 
 Dish created by:
 <%= @dish.chef.name %>

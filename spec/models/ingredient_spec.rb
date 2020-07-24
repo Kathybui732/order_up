@@ -10,4 +10,14 @@ RSpec.describe Ingredient, type: :model do
     it { should have_many :dish_ingredients }
     it { should have_many(:dishes).through(:dish_ingredients) }
   end
+
+  describe "methods" do
+    before :each do
+      ingredient_1 = Ingredient.create(name: "Marinara sauce", calories: 300)
+      ingredient_2 = Ingredient.create(name: "Mozzerella", calories: 600)
+    end
+    it "#total_calorie_count" do
+      expect(Ingredient.total_calorie_count). to eq(900)
+    end
+  end
 end
