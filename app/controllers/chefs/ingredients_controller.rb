@@ -1,4 +1,4 @@
-class ChefIngredientsController < ApplicationController
+class Chefs::IngredientsController < ApplicationController
 
   def index
     @chef = Chef.find(params[:chef_id])
