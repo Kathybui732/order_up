@@ -2,7 +2,7 @@
 
 <%= link_to "Chef's Ingredients", "/chefs/#{@chef.id}/ingredients" %>
 
-<%# Most Used Ingredients:
+Most Used Ingredients:
 <% @chef.most_used_ingredients.each do |ingredient| %>
-<%# <%= ingredient.name %> %>
-<%# <% end %> %> %>
+<%= ingredient %>
+<% end %>
