@@ -33,7 +33,7 @@ RSpec.describe "Chef's Show Page" do
     expect(page).to have_content(@ingredient_1.name, count: 1)
     expect(page).to have_content(@ingredient_2.name, count: 1)
     expect(page).to have_content(@ingredient_3.name, count: 1)
-    expect(page).to have_content(@ingredient_4.name, count: 1)
+    expect(page).to have_content(@ingredient_4.name).once #both work
   end
 
   it "the three most popular ingredients that the chef uses in their dishes" do

@@ -31,13 +31,13 @@ RSpec.describe Chef, type: :model do
     end
 
     it "#all_ingredients" do
-      ingredients = [@ingredient_1.name, @ingredient_2.name, @ingredient_3.name, @ingredient_4.name]
-      expect(@chef.all_ingredients).to eq(ingredients)
+      ingredients = [@ingredient_1.name, @ingredient_2.name, @ingredient_3.name, @ingredient_4.name].sort
+      expect(@chef.all_ingredients.sort).to eq(ingredients)
     end
 
     it "#most_used_ingredients" do
-      ingredients = [@ingredient_1.name, @ingredient_2.name, @ingredient_3.name]
-      expect(@chef.most_used_ingredients).to eq(ingredients)
+      ingredients = [@ingredient_1.name, @ingredient_2.name, @ingredient_3.name].sort
+      expect(@chef.most_used_ingredients.sort).to eq(ingredients)
     end
   end
 end
