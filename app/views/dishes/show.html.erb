@@ -1,0 +1,9 @@
+<%= @dish.name %>'s Show Page
+
+Ingredients for this dish:
+<% @dish.ingredients.each do |ingredient| %>
+<%= ingredient.name %> (<%= ingredient.calories %>)
+<% end %>
+
+Dish created by:
+<%= @dish.chef.name %>
