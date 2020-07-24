@@ -1,5 +1,5 @@
-All of Chef's ingredients
+All of Chef's Ingredients
 
-<% @ingredients.used_by(@chef.id).each do |ingredient| %>
+<% @chef.all_ingredients.each do |ingredient| %>
 <%= ingredient %>
 <% end %>
