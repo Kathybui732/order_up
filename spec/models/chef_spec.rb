@@ -26,5 +26,10 @@ RSpec.describe Chef, type: :model do
       ingredients = [@ingredient_1.name, @ingredient_2.name]
       expect(@chef.all_ingredients).to eq(ingredients)
     end
+
+    # it "#most_used_ingredients" do
+    #   ingredients = [@ingredient_1, @ingredient_2, @ingredient_3]
+    #   expect(@chef.most_used_ingredients).to eq(ingredients)
+    # end
   end
 end

@@ -26,4 +26,13 @@ RSpec.describe "Chef's Show Page" do
     expect(page).to have_content(@ingredient_1.name), count: 1, exact: true
     expect(page).to have_content(@ingredient_2.name), count: 1, exact: true
   end
+
+  # it "the three most popular ingredients that the chef uses in their dishes" do
+  #   dish_3 = chef.dishes.create(name: "Calzone", description: "With italian sausage")
+  #   ingredient_4 = Ingredient.create(name: "Pasta", calories: 700)
+  #   DishIngredient.create(ingredient: ingredient_2, dish: dish_2)
+  #   DishIngredient.create(ingredient: ingredient_1, dish: dish_3)
+  #   visit "/chefs/#{@chef.id}"
+  #   expect(page).to have_content("Most Used Ingredients: #{@ingredient_1.name} #{@ingredient_2.name} #{@ingredient_3.name}")
+  # end
 end
